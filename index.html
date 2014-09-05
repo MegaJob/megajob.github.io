@@ -7,7 +7,7 @@
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Custom -->
     <link href="css/elnos.css" rel="stylesheet">
 
@@ -21,23 +21,26 @@
   <body>
     
       
-    <div class="navbar navbar-default" role="navigation">
-        <div class="container">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
             <div class="navbar-header" class="logo">
-                <img style="height:100%" src="img/logo.png"/>
+                <img style="max-height:40%;" src="img/logo.png"/>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    
-                    <li class="active">
-                        <a>Склад</a>
-                    </li>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a>Склад</a></li>
                     <li><a>Компоненты</a></li>
                     <li><a>Приборы</a></li>
                     <li><a>Персонал</a></li>
                 </ul>
+                <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Введите QR код...">
+                </form>
             </div>
         </div>
+    </div>
+      
+    <div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
