@@ -10,6 +10,14 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Custom -->
     <link href="css/elnos.css" rel="stylesheet">
+      
+   <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,28 +28,106 @@
   </head>
   <body>
     
-      
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container-fluid">
-            <div class="navbar-header" class="logo">
-                <img style="max-height:40%;" src="img/logo.png"/>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img class="navbar-brand" src="img/logo.png"/>
             </div>
-            <div class="navbar-collapse collapse">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a>Склад</a></li>
-                    <li><a>Компоненты</a></li>
-                    <li><a>Приборы</a></li>
-                    <li><a>Персонал</a></li>
+                    <li>
+                        <a href="#">Склад</a>
+                    </li>
+                    <li>
+                        <a href="#">Компоненты</a>
+                    </li>
+                    <li>
+                        <a href="#">Приборы</a>
+                    </li>
                 </ul>
-                <form class="navbar-form navbar-right">
-                    <input type="text" class="form-control" placeholder="Введите QR код...">
-                </form>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+      
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-left">
+                <h1>Kerber 2.0</h1>
+                <p class="lead">Прибор в сборе</p>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3 text-center"><img src="img/kerber.jpg"></div>
+                        <div class="col-md-9">
+                            <h4>Запас готовых блоков</h4>
+                            <div class="row">
+                                <div class="container col-md-2">
+                                    <p>Сита</p>
+                                    <div class="progress">123
+                                    </div>
+                                </div>
+                                <div class="container col-md-2">
+                                    <p>Ячейка</p>
+                                    <div class="progress">123
+                                    </div>
+                                </div>
+                                <div class="container col-md-2">
+                                    <p>Печка передняя</p>
+                                    <div class="progress">123
+                                    </div>
+                                </div>
+                                <div class="container col-md-2">
+                                    <p>Печка задняя</p>
+                                    <div class="progress">123
+                                    </div>
+                                </div>
+                                <div class="container col-md-2">
+                                    <p>Ячейка</p>
+                                    <div class="progress">123
+                                    </div>
+                                </div>
+                                <div class="container col-md-2">
+                                    <p>Печка передняя</p>
+                                    <div class="progress">123
+                                    </div>
+                                </div>
+                                <div class="container col-md-2">
+                                    <p>Сита</p>
+                                    <div class="progress">123
+                                    </div>
+                                </div>
+                                <div class="container col-md-2">
+                                    <p>Ячейка</p>
+                                    <div class="progress">123
+                                    </div>
+                                </div>
+                                <div class="container col-md-2">
+                                    <p>Печка передняя</p>
+                                    <div class="progress">123
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- /.row -->
+
     </div>
-      
-    <div>
-    </div>
+    <!-- /.container -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
