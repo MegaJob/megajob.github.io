@@ -83,7 +83,7 @@
                                 </div>
                                 <div class="panel-body">
                                     <small>Текущий прогноз</small>
-                                    <div class="progress">
+                                    <div class="progress" id="NearLimit" rel="popover" data-placement="right" data-original-title="Слабое звено" data-content="<p>Ячейка&nbsp-&nbsp10</p><p>Сита&nbsp-&nbsp15<p>">
                                         <div class="progress-bar progress-bar-danger" style="width: 10%; min-width:15%">
                                             <span>50</span>
                                         </div>
@@ -230,9 +230,20 @@
                                 <div class="table-responsive">
                                     <table class="table table-hover table-bordered table-striped table-condensed">
                                         <thead>
-                                            <th>Название детали</th>
-                                            <th>Кол-во в блоке</th>
-                                            <th>Кол-во на складе</th>
+                                            <tr>
+                                                <th>
+                                                    <div>Название детали <span class="glyphicon glyphicon-sort"></span></div>
+                                                    <div><input class="col-md-12"></div>
+                                                </th>
+                                                <th>
+                                                    <div>Кол-во в блоке <span class="glyphicon glyphicon-sort"></span></div>
+                                                    <div><input class="col-md-12"></div>
+                                                </th>
+                                                <th>
+                                                    <div>Кол-во на складе <span class="glyphicon glyphicon-sort"></span></div>
+                                                    <div><input class="col-md-12"></div>
+                                                </th>
+                                            </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
@@ -374,6 +385,7 @@
                     
                     <!-- Таблица проиборов -->
                     <div class="row">
+                        <div class="col-md-12 text-right"><button type="button" class="btn btn-xs btn-info">Очистить фильтр</button></div>
                         <div class="col-md-12">
                             <div class="table-responsive">
                                 <table class="table table-hover table-bordered table-striped table-condensed">
@@ -531,6 +543,30 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- Кнопки -->
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-default btn-lg">Регистрация</button>
+                            </div>
+                            
+                            <div class="col-md-1">&nbsp;</div>
+                            
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-default btn-lg">Подготовка</button>
+                            </div>
+                            
+                            <div class="col-md-1">&nbsp;</div>
+                            
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-default btn-lg">В ремонт</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Speacer -->
+                    <div class="row">&nbsp;</div>
                 </div>
             </div>
         </div>
@@ -544,5 +580,7 @@
     <script type="text/javascript" charset="utf8" src="/DataTables-1.10.2/js/jquery.dataTables.js"></script>
     <!-- Spoiler -->
     <script src="js/spoiller.js"></script>
+    <!-- Custom -->
+    <script src="js/elnos.js"></script>
   </body>
 </html>
