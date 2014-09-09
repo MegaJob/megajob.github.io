@@ -64,14 +64,13 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-left col-xl-12">
-                <h1>Kerber 2.0</h1>
-                <p class="lead">Прибор в сборе</p>
-
+                <h1>CE2.0</h1>
+                <p class="lead">Ячейка</p>
 
                 <!-- Общая информация -->
                 <div class="row">
                     <div class="col-md-3 text-center">
-                        <img class="col-md-12" src="img/kerber.jpg">
+                        <img class="col-md-12" src="img/pin1.jpg">
                         <div>&nbsp;</div>
                     </div>
 
@@ -82,13 +81,13 @@
                             </div>
                             <div class="panel-body">
                                 <small>Текущий прогноз</small>
-                                <div class="progress" id="NearLimit" rel="popover" data-placement="right" data-original-title="Слабое звено" data-content="<p>Ячейка&nbsp-&nbsp10</p><p>Сита&nbsp-&nbsp15<p>">
+                                <div class="progress" id="NearLimit" rel="popover" data-placement="right" data-original-title="Критические позиции" data-content="<p>Винтик&nbsp-&nbsp10</p><p>Шпунтик&nbsp-&nbsp15<p>">
                                     <div class="progress-bar progress-bar-danger" style="width: 10%; min-width:15%">
                                         <span>50</span>
                                     </div>
                                 </div>
                                 <small>Дальний прогноз</small>
-                                <div class="progress">
+                                <div class="progress"  id="FarLimit" rel="popover" data-placement="right" data-original-title="Критические позиции" data-content="Всё в наличии">
                                     <div class="progress-bar progress-bar-success" style="width: 75%">
                                         <span>300</span>
                                     </div>
@@ -114,7 +113,7 @@
                     <div class="col-md-4">
                         <div class="panel panel-info">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Статусы приборов</h3>
+                                <h3 class="panel-title">Статусы компонента</h3>
                             </div>
                             <div class="table-responsive">
                                 <table class="table table-hover table-bordered table-striped table-condensed">
@@ -150,75 +149,7 @@
                     </div>
                 </div>
 
-                <!-- Запас готовых блоков -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="panel panel-default spoiler">
-                            <div class="panel-heading spoiler-btn">
-                                <h3 class="panel-title"><span class="glyphicon glyphicon-chevron-down"></span> Запас готовых блоков <span class="badge badge-warning">10</span></h3>
-                            </div>
-                            <div class="panel-body spoiler-body collapse">
-                                <div class="table-responsive">
-                                    <table class="table table-hover table-bordered table-condensed">
-                                        <thead>
-                                            <th>
-                                                <p>Название блока</p>
-                                            </th>
-                                            <th>
-                                                <p>Кол-во</p>
-                                            </th>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="danger">
-                                                <td>Ячейка (v1.0)</td>
-                                                <td>10</td>
-                                            </tr>
-                                            <tr class="danger">
-                                                <td>Сита (v1.0)</td>
-                                                <td>15</td>
-                                            </tr>
-
-                                            <tr class="warning">
-                                                <td>Боковая плата 1</td>
-                                                <td>40</td>
-                                            </tr>
-                                            <tr class="warning">
-                                                <td>Печка передняя (v1.0)</td>
-                                                <td>50</td>
-                                            </tr>
-                                            <tr class="warning">
-                                                <td>Компьютер Vortex</td>
-                                                <td>50</td>
-                                            </tr>
-                                            <tr class="warning">
-                                                <td>Печка задняя (v1.0)</td>
-                                                <td>90</td>
-                                            </tr>
-                                            <tr class="success">
-                                                <td>Боковая плата 2 (v1.4)</td>
-                                                <td>200</td>
-                                            </tr>
-                                            <tr class="success">
-                                                <td>Блок питания-зарядки</td>
-                                                <td>300</td>
-                                            </tr>
-                                            <tr class="success">
-                                                <td>Усилитель (v1.0)</td>
-                                                <td>450</td>
-                                            </tr>
-                                            <tr class="success">
-                                                <td>Блок высокого (1.0)</td>
-                                                <td>500</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Состав блока -->
+                <!-- Состав компонента -->
                 <div class="row">
                     <div class="col-md-12">
                         <div class="panel panel-default spoiler">
@@ -360,22 +291,13 @@
 
                 <!-- Кнопки -->
                 <div class="row text-center">
-                    <div class="col-md-12">
-                        <div class="col-md-3">
+                    <div class="col-md-12 btn-group">
+
                             <button type="button" class="btn btn-default btn-lg">Регистрация</button>
-                        </div>
-
-                        <div class="col-md-1">&nbsp;</div>
-
-                        <div class="col-md-3">
                             <button type="button" class="btn btn-default btn-lg">Подготовка</button>
-                        </div>
 
-                        <div class="col-md-1">&nbsp;</div>
-
-                        <div class="col-md-3">
                             <button type="button" class="btn btn-default btn-lg">В ремонт</button>
-                        </div>
+
                     </div>
                 </div>
 
