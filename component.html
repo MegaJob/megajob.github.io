@@ -7,11 +7,7 @@
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
-    <link href="css/magic-bootstrap.css" rel="stylesheet">
-    <!-- DataTables -->
-    <link href="css/jquery.dataTables.css" rel="stylesheet">
-    <!-- DataTables Bootstrap -->
-    <link href="css/dataTables.bootstrap.css" rel="stylesheet"> 
+    <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Custom -->
     <link href="css/custom.css" rel="stylesheet">
       
@@ -33,7 +29,7 @@
   <body>
     
     <!-- Navigation -->
-    <nav class="navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -43,7 +39,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img class="navbar-brand" style="height:50px; padding:0;" src="img/logo_bgnd.png"/>
+                <img class="navbar-brand" src="img/logo.png"/>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -68,14 +64,13 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-left col-xl-12">
-                <h1>Kerber 2.0</h1>
-                <p class="lead">Прибор в сборе</p>
-
+                <h1>CE2.0</h1>
+                <p class="lead">Ячейка</p>
 
                 <!-- Общая информация -->
                 <div class="row">
                     <div class="col-md-3 text-center">
-                        <img class="col-md-12" src="img/kerber.jpg">
+                        <img class="col-md-12" src="img/pin1.jpg">
                         <div>&nbsp;</div>
                     </div>
 
@@ -86,13 +81,13 @@
                             </div>
                             <div class="panel-body">
                                 <small>Текущий прогноз</small>
-                                <div class="progress" id="NearLimit" rel="popover" data-placement="right" data-original-title="Слабое звено" data-content="<p>Ячейка&nbsp-&nbsp10</p><p>Сита&nbsp-&nbsp15<p>">
+                                <div class="progress" id="NearLimit" rel="popover" data-placement="right" data-original-title="Критические позиции" data-content="<p>Винтик&nbsp-&nbsp10</p><p>Шпунтик&nbsp-&nbsp15<p>">
                                     <div class="progress-bar progress-bar-danger" style="width: 10%; min-width:15%">
                                         <span>50</span>
                                     </div>
                                 </div>
                                 <small>Дальний прогноз</small>
-                                <div class="progress">
+                                <div class="progress"  id="FarLimit" rel="popover" data-placement="right" data-original-title="Критические позиции" data-content="Всё в наличии">
                                     <div class="progress-bar progress-bar-success" style="width: 75%">
                                         <span>300</span>
                                     </div>
@@ -118,7 +113,7 @@
                     <div class="col-md-4">
                         <div class="panel panel-info">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Статусы приборов</h3>
+                                <h3 class="panel-title">Статусы компонента</h3>
                             </div>
                             <div class="table-responsive">
                                 <table class="table table-hover table-bordered table-striped table-condensed">
@@ -128,7 +123,7 @@
                                             <td>15</td>
                                         </tr>
                                         <tr>
-                                            <td>Настройка</td>
+                                            <td>Подготовка</td>
                                             <td>6</td>
                                         </tr>
                                         <tr>
@@ -138,10 +133,6 @@
                                         <tr>
                                             <td>В ремонте</td>
                                             <td>5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Отгружено</td>
-                                            <td>200</td>
                                         </tr>
                                         <tr>
                                             <td>Разобрано</td>
@@ -154,78 +145,10 @@
                     </div>
                 </div>
 
-                <!-- Запас готовых блоков -->
+                <!-- Состав компонента -->
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="panel panel-info spoiler">
-                            <div class="panel-heading spoiler-btn">
-                                <h3 class="panel-title"><span class="glyphicon glyphicon-chevron-down"></span> Запас готовых блоков <span class="badge badge-warning">10</span></h3>
-                            </div>
-                            <div class="panel-body spoiler-body collapse">
-                                <div class="table-responsive">
-                                    <table class="table table-hover table-bordered table-condensed">
-                                        <thead>
-                                            <th>
-                                                <p>Название блока</p>
-                                            </th>
-                                            <th>
-                                                <p>Кол-во</p>
-                                            </th>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="danger">
-                                                <td>Ячейка (v1.0)</td>
-                                                <td>10</td>
-                                            </tr>
-                                            <tr class="danger">
-                                                <td>Сита (v1.0)</td>
-                                                <td>15</td>
-                                            </tr>
-
-                                            <tr class="warning">
-                                                <td>Боковая плата 1</td>
-                                                <td>40</td>
-                                            </tr>
-                                            <tr class="warning">
-                                                <td>Печка передняя (v1.0)</td>
-                                                <td>50</td>
-                                            </tr>
-                                            <tr class="warning">
-                                                <td>Компьютер Vortex</td>
-                                                <td>50</td>
-                                            </tr>
-                                            <tr class="warning">
-                                                <td>Печка задняя (v1.0)</td>
-                                                <td>90</td>
-                                            </tr>
-                                            <tr class="success">
-                                                <td>Боковая плата 2 (v1.4)</td>
-                                                <td>200</td>
-                                            </tr>
-                                            <tr class="success">
-                                                <td>Блок питания-зарядки</td>
-                                                <td>300</td>
-                                            </tr>
-                                            <tr class="success">
-                                                <td>Усилитель (v1.0)</td>
-                                                <td>450</td>
-                                            </tr>
-                                            <tr class="success">
-                                                <td>Блок высокого (1.0)</td>
-                                                <td>500</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                <!-- Состав блока -->
-
-                    <div class="col-md-6">
-                        <div class="panel panel-info spoiler">
+                    <div class="col-md-12">
+                        <div class="panel panel-default spoiler">
                         <div class="panel-heading spoiler-btn">
                             <h3 class="panel-title"><span class="glyphicon glyphicon-chevron-down"></span> Состав блока</h3>
                         </div>
@@ -249,37 +172,37 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                        <tr class="danger">
                                             <td>Винтик</td>
                                             <td>2 шт</td>
                                             <td>10 шт</td>
                                         </tr>
-                                        <tr>
+                                        <tr class="danger">
                                             <td>Резина, которую нужно тянуть</td>
                                             <td>30 см</td>
                                             <td>100 м</td>
                                         </tr>
-                                        <tr>
+                                        <tr class="danger">
                                             <td>Неведомая хрень</td>
                                             <td>200 cм<sup>2</sup></td>
                                             <td>1000 м<sup>2</sup></td>
                                         </tr>
-                                        <tr>
+                                        <tr class="warning">
                                             <td>Шпунтик</td>
                                             <td>6 шт</td>
                                             <td>50 шт</td>
                                         </tr>
-                                        <tr>
+                                        <tr class="warning">
                                             <td>Гайка</td>
                                             <td>4 шт</td>
                                             <td>60 шт</td>
                                         </tr>
-                                        <tr>
+                                        <tr class="warning">
                                             <td>Супер технологичная железяка</td>
                                             <td>5 шт</td>
                                             <td>500 шт</td>
                                         </tr>
-                                        <tr>
+                                        <tr class="warning">
                                             <td>Ещё какая-то деталь со склада</td>
                                             <td>0</td>
                                             <td>1000</td>
@@ -365,9 +288,9 @@
                 <!-- Кнопки -->
                 <div class="row text-center">
                     <div class="col-md-12 btn-group">
-                        <button type="button" class="btn btn-info btn-lg col-md-2">Регистрация</button>
-                        <button type="button" class="btn btn-info btn-lg col-md-2">Подготовка</button>
-                        <button type="button" class="btn btn-info btn-lg col-md-2">В ремонт</button>
+                        <button type="button" class="btn btn-default btn-lg col-md-2">Регистрация</button>
+                        <button type="button" class="btn btn-default btn-lg col-md-2">Подготовка</button>
+                        <button type="button" class="btn btn-default btn-lg col-md-2">В ремонт</button>
                     </div>
                 </div>
 
@@ -379,13 +302,15 @@
                     <div class="col-md-12 text-right"><button type="button" class="btn btn-xs btn-info">Очистить фильтр</button></div>
                     <div class="col-md-12">
                         <div class="table-responsive">
-                            <table id="devicelist" class="table table-hover table-bordered table-striped table-condensed display compact">
+                            <table class="table table-hover table-bordered table-striped table-condensed">
                                 <thead>
                                     <th>
-                                        <div>Заводской номер</div>
+                                        <div>Заводской номер <span class="glyphicon glyphicon-sort"></span></div>
+                                        <div><input class="col-md-12"></div>
                                     </th>
                                     <th>
-                                        <div>Статус</div>
+                                        <div>Статус <span class="glyphicon glyphicon-sort"></span></div>
+                                        <div><input class="col-md-12"></div>
                                     </th>
                                     <th class="text-center">
                                         <button><span class="glyphicon glyphicon-filter"></span></button>
@@ -393,137 +318,137 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
+                                        <td>CE2.0-123-2015</td>
                                         <td>Готов</td>
                                         <td class="text-center"><label><input type="checkbox"></label></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
+                                        <td>CE2.0-123-2015</td>
+                                        <td>Готов</td>
+                                        <td class="text-center"><label><input type="checkbox"></label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CE2.0-123-2015</td>
                                         <td>В ремонте</td>
                                         <td class="text-center"><label><input type="checkbox"></label></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-222-2015</td>
+                                        <td>CE2.0-123-2015</td>
+                                        <td>Используется</td>
+                                        <td class="text-center"><label><input type="checkbox"></label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CE2.0-123-2015</td>
                                         <td>Готов</td>
                                         <td class="text-center"><label><input type="checkbox"></label></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-235-2015</td>
-                                        <td>Отгружен</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>KE2.0-123-2015</td>
+                                        <td>CE2.0-123-2015</td>
                                         <td>Готов</td>
                                         <td class="text-center"><label><input type="checkbox"></label></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
+                                        <td>CE2.0-123-2015</td>
                                         <td>Готов</td>
                                         <td class="text-center"><label><input type="checkbox"></label></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
+                                        <td>CE2.0-123-2015</td>
                                         <td>Готов</td>
                                         <td class="text-center"><label><input type="checkbox"></label></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
+                                        <td>CE2.0-123-2015</td>
                                         <td>Готов</td>
                                         <td class="text-center"><label><input type="checkbox"></label></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
+                                        <td>CE2.0-123-2015</td>
+                                        <td>Подготовка</td>
+                                        <td class="text-center"><label><input type="checkbox"></label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CE2.0-123-2015</td>
                                         <td>Готов</td>
                                         <td class="text-center"><label><input type="checkbox"></label></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
+                                        <td>CE2.0-123-2015</td>
                                         <td>Готов</td>
                                         <td class="text-center"><label><input type="checkbox"></label></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
+                                        <td>CE2.0-123-2015</td>
+                                        <td>Подготовка</td>
+                                        <td class="text-center"><label><input type="checkbox"></label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CE2.0-123-2015</td>
                                         <td>Готов</td>
                                         <td class="text-center"><label><input type="checkbox"></label></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
+                                        <td>CE2.0-123-2015</td>
                                         <td>Готов</td>
                                         <td class="text-center"><label><input type="checkbox"></label></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
+                                        <td>CE2.0-123-2015</td>
+                                        <td>Разобрано</td>
+                                        <td class="text-center"><label><input type="checkbox"></label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CE2.0-123-2015</td>
                                         <td>Готов</td>
                                         <td class="text-center"><label><input type="checkbox"></label></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
+                                        <td>CE2.0-123-2015</td>
                                         <td>Готов</td>
                                         <td class="text-center"><label><input type="checkbox"></label></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
+                                        <td>CE2.0-123-2015</td>
                                         <td>Готов</td>
                                         <td class="text-center"><label><input type="checkbox"></label></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
+                                        <td>CE2.0-123-2015</td>
                                         <td>Готов</td>
                                         <td class="text-center"><label><input type="checkbox"></label></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
+                                        <td>CE2.0-123-2015</td>
                                         <td>Готов</td>
                                         <td class="text-center"><label><input type="checkbox"></label></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
+                                        <td>CE2.0-123-2015</td>
                                         <td>Готов</td>
                                         <td class="text-center"><label><input type="checkbox"></label></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
+                                        <td>CE2.0-123-2015</td>
                                         <td>Готов</td>
                                         <td class="text-center"><label><input type="checkbox"></label></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
+                                        <td>CE2.0-123-2015</td>
                                         <td>Готов</td>
                                         <td class="text-center"><label><input type="checkbox"></label></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
+                                        <td>CE2.0-123-2015</td>
+                                        <td>Разобрано</td>
+                                        <td class="text-center"><label><input type="checkbox"></label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CE2.0-123-2015</td>
                                         <td>Готов</td>
                                         <td class="text-center"><label><input type="checkbox"></label></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>KE2.0-123-2015</td>
+                                        <td>CE2.0-123-2015</td>
                                         <td>Готов</td>
                                         <td class="text-center"><label><input type="checkbox"></label></td>
                                     </tr>
@@ -552,20 +477,10 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-1.11.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.js"></script>
-    <!-- DataTables -->
-    <script src="js/jquery.dataTables.min.js"></script>
-    <script src="js/dataTables.bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <!-- Spoiler -->
     <script src="js/spoiller.js"></script>
     <!-- Custom -->
     <script src="js/custom.js"></script>
-    
-    <script>
-        $(document).ready(function() {
-            $('#devicelist').dataTable();
-        } );
-    </script>  
-      
   </body>
 </html>
