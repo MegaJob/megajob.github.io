@@ -64,440 +64,203 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-left col-xl-12">
-                <h1>CE2.0</h1>
-                <span class="lead">Ячейка</span>
-                    
-                <!-- Общая информация -->
-                <div class="row">
-                    <div class="col-md-3 text-center">
-                        <img class="col-md-12" src="img/kerber.jpg">
-                        <div>&nbsp;</div>
-                    </div>
-
-                    <div class="col-md-2">
-                        <div class="panel panel-info">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Запас деталей</h3>
-                            </div>
-                            <div class="panel-body">
-                                <small>Текущий прогноз</small>
-                                <div class="progress" id="NearLimit" rel="popover" data-placement="right" data-original-title="Слабое звено" data-content="<p>Ячейка&nbsp-&nbsp10</p><p>Сита&nbsp-&nbsp15<p>">
-                                    <div class="progress-bar progress-bar-danger" style="width: 10%; min-width:15%">
-                                        <span>50</span>
-                                    </div>
-                                </div>
-                                <small>Дальний прогноз</small>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-success" style="width: 75%">
-                                        <span>300</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="panel panel-info">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Собрано за месяц</h3>
-                            </div>
-                            <div class="panel-body">
-                                <p>Иван Иванов <span class="badge">10</span></p>
-                                <p>Сидор Сидоров <span class="badge">10</span></p>
-                                <p>Николай Николаевич <span class="badge">10</span></p>
-                            </div>
-                        </div>    
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="panel panel-info">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Статусы приборов</h3>
-                            </div>
-                            <div class="table-responsive">
-                                <table class="table table-hover table-bordered table-striped table-condensed">
-                                    <tbody>
-                                        <tr>
-                                            <td>Готов</td>
-                                            <td>15</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Настройка</td>
-                                            <td>6</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Используется</td>
-                                            <td>4</td>
-                                        </tr>
-                                        <tr>
-                                            <td>В ремонте</td>
-                                            <td>5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Отгружено</td>
-                                            <td>200</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Разобрано</td>
-                                            <td>0</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Состав блока -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="panel panel-default spoiler">
-                        <div class="panel-heading spoiler-btn">
-                            <h3 class="panel-title"><span class="glyphicon glyphicon-chevron-down"></span> Состав блока</h3>
-                        </div>
-                        <div class="panel-body spoiler-body collapse">
-                            <div class="table-responsive">
-                                <table class="table table-hover table-bordered table-striped table-condensed">
-                                    <thead>
-                                        <tr>
-                                            <th>
-                                                <div>Название детали <span class="glyphicon glyphicon-sort"></span></div>
-                                                <div><input class="col-md-12"></div>
-                                            </th>
-                                            <th>
-                                                <div>Кол-во в блоке <span class="glyphicon glyphicon-sort"></span></div>
-                                                <div><input class="col-md-12"></div>
-                                            </th>
-                                            <th>
-                                                <div>Кол-во на складе <span class="glyphicon glyphicon-sort"></span></div>
-                                                <div><input class="col-md-12"></div>
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Винтик</td>
-                                            <td>2 шт</td>
-                                            <td>10 шт</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Резина, которую нужно тянуть</td>
-                                            <td>30 см</td>
-                                            <td>100 м</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Неведомая хрень</td>
-                                            <td>200 cм<sup>2</sup></td>
-                                            <td>1000 м<sup>2</sup></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Шпунтик</td>
-                                            <td>6 шт</td>
-                                            <td>50 шт</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Гайка</td>
-                                            <td>4 шт</td>
-                                            <td>60 шт</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Супер технологичная железяка</td>
-                                            <td>5 шт</td>
-                                            <td>500 шт</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ещё какая-то деталь со склада</td>
-                                            <td>0</td>
-                                            <td>1000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Винтик</td>
-                                            <td>2 шт</td>
-                                            <td>10 шт</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Резина, которую нужно тянуть</td>
-                                            <td>30 см</td>
-                                            <td>100 м</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Неведомая хрень</td>
-                                            <td>200 cм<sup>2</sup></td>
-                                            <td>1000 м<sup>2</sup></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Шпунтик</td>
-                                            <td>6 шт</td>
-                                            <td>50 шт</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Гайка</td>
-                                            <td>4 шт</td>
-                                            <td>60 шт</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Супер технологичная железяка</td>
-                                            <td>5 шт</td>
-                                            <td>500 шт</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ещё какая-то деталь со склада</td>
-                                            <td>0</td>
-                                            <td>1000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Винтик</td>
-                                            <td>2 шт</td>
-                                            <td>10 шт</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Резина, которую нужно тянуть</td>
-                                            <td>30 см</td>
-                                            <td>100 м</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Неведомая хрень</td>
-                                            <td>200 cм<sup>2</sup></td>
-                                            <td>1000 м<sup>2</sup></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Шпунтик</td>
-                                            <td>6 шт</td>
-                                            <td>50 шт</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Гайка</td>
-                                            <td>4 шт</td>
-                                            <td>60 шт</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Супер технологичная железяка</td>
-                                            <td>5 шт</td>
-                                            <td>500 шт</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ещё какая-то деталь со склада</td>
-                                            <td>0</td>
-                                            <td>1000</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-
+                <h1>Склад</h1>
+                
                 <!-- Кнопки -->
                 <div class="row text-center">
-                    <div class="col-md-12">
-                        <div class="col-md-3">
-                            <button type="button" class="btn btn-default btn-lg">Регистрация</button>
-                        </div>
-
-                        <div class="col-md-1">&nbsp;</div>
-
-                        <div class="col-md-3">
-                            <button type="button" class="btn btn-default btn-lg">Подготовка</button>
-                        </div>
-
-                        <div class="col-md-1">&nbsp;</div>
-
-                        <div class="col-md-3">
-                            <button type="button" class="btn btn-default btn-lg">В ремонт</button>
-                        </div>
+                    <div class="col-md-12 btn-group">
+                        <button type="button" class="btn btn-info btn-sm col-md-1">Регистрация</button>
+                        <button type="button" class="btn btn-info btn-sm col-md-1">Подготовка</button>
+                        <button type="button" class="btn btn-info btn-sm col-md-1">В ремонт</button>
+                        <button type="button" class="btn btn-info btn-sm col-md-1">Регистрация</button>
+                        <button type="button" class="btn btn-info btn-sm col-md-1">Подготовка</button>
+                        <button type="button" class="btn btn-info btn-sm col-md-1">В ремонт</button>
+                        <button type="button" class="btn btn-info btn-sm col-md-1">Регистрация</button>
+                        <button type="button" class="btn btn-info btn-sm col-md-1">Подготовка</button>
+                        <button type="button" class="btn btn-info btn-sm col-md-1">В ремонт</button>
+                        <button type="button" class="btn btn-info btn-sm col-md-1">Регистрация</button>
+                        <button type="button" class="btn btn-info btn-sm col-md-1">Подготовка</button>
+                        <button type="button" class="btn btn-info btn-sm col-md-1">В ремонт</button>
                     </div>
                 </div>
-
+                
                 <!-- Speacer -->
                 <div class="row">&nbsp;</div>
-
-                <!-- Таблица проиборов -->
+                
+                <!-- Состав блока -->
                 <div class="row">
-                    <div class="col-md-12 text-right"><button type="button" class="btn btn-xs btn-info">Очистить фильтр</button></div>
                     <div class="col-md-12">
                         <div class="table-responsive">
                             <table class="table table-hover table-bordered table-striped table-condensed">
                                 <thead>
-                                    <th>
-                                        <div>Заводской номер <span class="glyphicon glyphicon-sort"></span></div>
-                                        <div><input class="col-md-12"></div>
-                                    </th>
-                                    <th>
-                                        <div>Статус <span class="glyphicon glyphicon-sort"></span></div>
-                                        <div><input class="col-md-12"></div>
-                                    </th>
-                                    <th class="text-center">
-                                        <button><span class="glyphicon glyphicon-filter"></span></button>
-                                    </th>
+                                    <tr>
+                                        <th>
+                                            <div>Класс детали <span class="glyphicon glyphicon-sort"></span></div>
+                                            <div><input></div>
+                                        </th>
+                                        <th>
+                                            <div>Тип детали <span class="glyphicon glyphicon-sort"></span></div>
+                                            <div><input></div>
+                                        </th>
+                                        <th>
+                                            <div>Название детали <span class="glyphicon glyphicon-sort"></span></div>
+                                            <div><input></div>
+                                        </th>
+                                        <th>
+                                            <div>Кол-во на складе <span class="glyphicon glyphicon-sort"></span></div>
+                                            <div><input></div>
+                                        </th>
+                                        <th>
+                                            <div>Критическое кол-во <span class="glyphicon glyphicon-sort"></span></div>
+                                            <div><input></div>
+                                        </th>
+                                        <th>&nbsp;</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
+                                        <td>Крепёж</td>
+                                        <td>Винты</td>
+                                        <td>Винтик</td>
+                                        <td>2 шт</td>
+                                        <td>10 шт</td>
+                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
+                                        <td>Резина</td>
+                                        <td>Сита</td>
+                                        <td>Резина, которую нужно тянуть</td>
+                                        <td>30 см</td>
+                                        <td>100 м</td>
+                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
+                                        <td>Резина</td>
+                                        <td>Сита</td>
+                                        <td>Неведомая хрень</td>
+                                        <td>200 cм<sup>2</sup></td>
+                                        <td>1000 м<sup>2</sup></td>
+                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
+                                        <td>Резина</td>
+                                        <td>Сита</td>
+                                        <td>Шпунтик</td>
+                                        <td>6 шт</td>
+                                        <td>50 шт</td>
+                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
+                                        <td>Резина</td>
+                                        <td>Сита</td>
+                                        <td>Гайка</td>
+                                        <td>4 шт</td>
+                                        <td>60 шт</td>
+                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
+                                        <td>Резина</td>
+                                        <td>Сита</td>
+                                        <td>Супер технологичная железяка</td>
+                                        <td>5 шт</td>
+                                        <td>500 шт</td>
+                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
+                                        <td>Резина</td>
+                                        <td>Сита</td>
+                                        <td>Ещё какая-то деталь со склада</td>
+                                        <td>0</td>
+                                        <td>1000</td>
+                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
+                                        <td>Резина</td>
+                                        <td>Сита</td>
+                                        <td>Винтик</td>
+                                        <td>2 шт</td>
+                                        <td>10 шт</td>
+                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
+                                        <td>Резина</td>
+                                        <td>Сита</td>
+                                        <td>Резина, которую нужно тянуть</td>
+                                        <td>30 см</td>
+                                        <td>100 м</td>
+                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
+                                        <td>Резина</td>
+                                        <td>Сита</td>
+                                        <td>Неведомая хрень</td>
+                                        <td>200 cм<sup>2</sup></td>
+                                        <td>1000 м<sup>2</sup></td>
+                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
+                                        <td>Резина</td>
+                                        <td>Сита</td>
+                                        <td>Шпунтик</td>
+                                        <td>6 шт</td>
+                                        <td>50 шт</td>
+                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
+                                        <td>Резина</td>
+                                        <td>Сита</td>
+                                        <td>Гайка</td>
+                                        <td>4 шт</td>
+                                        <td>60 шт</td>
+                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
+                                        <td>Резина</td>
+                                        <td>Сита</td>
+                                        <td>Супер технологичная железяка</td>
+                                        <td>5 шт</td>
+                                        <td>500 шт</td>
+                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
+                                        <td>Резина</td>
+                                        <td>Сита</td>
+                                        <td>Ещё какая-то деталь со склада</td>
+                                        <td>0</td>
+                                        <td>1000</td>
+                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
+                                        <td>Резина</td>
+                                        <td>Сита</td>
+                                        <td>Винтик</td>
+                                        <td>2 шт</td>
+                                        <td>10 шт</td>
+                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
+                                        <td>Резина</td>
+                                        <td>Сита</td>
+                                        <td>Резина, которую нужно тянуть</td>
+                                        <td>30 см</td>
+                                        <td>100 м</td>
+                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
-
-                <!-- Кнопки -->
-                <div class="row text-center">
-                    <div class="col-md-12">
-                        <div class="col-md-3">
-                            <button type="button" class="btn btn-default btn-lg">Регистрация</button>
-                        </div>
-
-                        <div class="col-md-1">&nbsp;</div>
-
-                        <div class="col-md-3">
-                            <button type="button" class="btn btn-default btn-lg">Подготовка</button>
-                        </div>
-
-                        <div class="col-md-1">&nbsp;</div>
-
-                        <div class="col-md-3">
-                            <button type="button" class="btn btn-default btn-lg">В ремонт</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Speacer -->
-                <div class="row">&nbsp;</div>
-                
             </div>
+
+            <!-- Кнопки -->
+            <div class="row text-center">
+                <button type="button" class="btn btn-default btn-lg col-md-2">Новая деталь</button>
+            </div>
+
+            <!-- Speacer -->
+            <div class="row">&nbsp;</div>
+                
         </div>
     </div>
 

@@ -7,7 +7,11 @@
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/magic-bootstrap.css" rel="stylesheet">
+    <!-- DataTables -->
+    <link href="css/jquery.dataTables.css" rel="stylesheet">
+    <!-- DataTables Bootstrap -->
+    <link href="css/dataTables.bootstrap.css" rel="stylesheet"> 
     <!-- Custom -->
     <link href="css/custom.css" rel="stylesheet">
       
@@ -29,7 +33,7 @@
   <body>
     
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -39,7 +43,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img class="navbar-brand" src="img/logo.png"/>
+                <img class="navbar-brand" style="height:50px; padding:0;" src="img/logo_bgnd.png"/>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -152,8 +156,8 @@
 
                 <!-- Запас готовых блоков -->
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="panel panel-default spoiler">
+                    <div class="col-md-6">
+                        <div class="panel panel-info spoiler">
                             <div class="panel-heading spoiler-btn">
                                 <h3 class="panel-title"><span class="glyphicon glyphicon-chevron-down"></span> Запас готовых блоков <span class="badge badge-warning">10</span></h3>
                             </div>
@@ -216,12 +220,12 @@
                             </div>
                         </div>
                     </div>
-                </div>
+
 
                 <!-- Состав блока -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="panel panel-default spoiler">
+
+                    <div class="col-md-6">
+                        <div class="panel panel-info spoiler">
                         <div class="panel-heading spoiler-btn">
                             <h3 class="panel-title"><span class="glyphicon glyphicon-chevron-down"></span> Состав блока</h3>
                         </div>
@@ -360,22 +364,10 @@
 
                 <!-- Кнопки -->
                 <div class="row text-center">
-                    <div class="col-md-12">
-                        <div class="col-md-3">
-                            <button type="button" class="btn btn-default btn-lg">Регистрация</button>
-                        </div>
-
-                        <div class="col-md-1">&nbsp;</div>
-
-                        <div class="col-md-3">
-                            <button type="button" class="btn btn-default btn-lg">Подготовка</button>
-                        </div>
-
-                        <div class="col-md-1">&nbsp;</div>
-
-                        <div class="col-md-3">
-                            <button type="button" class="btn btn-default btn-lg">В ремонт</button>
-                        </div>
+                    <div class="col-md-12 btn-group">
+                        <button type="button" class="btn btn-info btn-lg col-md-2">Регистрация</button>
+                        <button type="button" class="btn btn-info btn-lg col-md-2">Подготовка</button>
+                        <button type="button" class="btn btn-info btn-lg col-md-2">В ремонт</button>
                     </div>
                 </div>
 
@@ -387,15 +379,13 @@
                     <div class="col-md-12 text-right"><button type="button" class="btn btn-xs btn-info">Очистить фильтр</button></div>
                     <div class="col-md-12">
                         <div class="table-responsive">
-                            <table class="table table-hover table-bordered table-striped table-condensed">
+                            <table id="devicelist" class="table table-hover table-bordered table-striped table-condensed display compact">
                                 <thead>
                                     <th>
-                                        <div>Заводской номер <span class="glyphicon glyphicon-sort"></span></div>
-                                        <div><input class="col-md-12"></div>
+                                        <div>Заводской номер</div>
                                     </th>
                                     <th>
-                                        <div>Статус <span class="glyphicon glyphicon-sort"></span></div>
-                                        <div><input class="col-md-12"></div>
+                                        <div>Статус</div>
                                     </th>
                                     <th class="text-center">
                                         <button><span class="glyphicon glyphicon-filter"></span></button>
@@ -409,17 +399,17 @@
                                     </tr>
                                     <tr>
                                         <td>KE2.0-123-2015</td>
+                                        <td>В ремонте</td>
+                                        <td class="text-center"><label><input type="checkbox"></label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>KE2.0-222-2015</td>
                                         <td>Готов</td>
                                         <td class="text-center"><label><input type="checkbox"></label></td>
                                     </tr>
                                     <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
-                                        <td class="text-center"><label><input type="checkbox"></label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>KE2.0-123-2015</td>
-                                        <td>Готов</td>
+                                        <td>KE2.0-235-2015</td>
+                                        <td>Отгружен</td>
                                         <td class="text-center"><label><input type="checkbox"></label></td>
                                     </tr>
                                     <tr>
@@ -545,22 +535,10 @@
 
                 <!-- Кнопки -->
                 <div class="row text-center">
-                    <div class="col-md-12">
-                        <div class="col-md-3">
-                            <button type="button" class="btn btn-default btn-lg">Регистрация</button>
-                        </div>
-
-                        <div class="col-md-1">&nbsp;</div>
-
-                        <div class="col-md-3">
-                            <button type="button" class="btn btn-default btn-lg">Подготовка</button>
-                        </div>
-
-                        <div class="col-md-1">&nbsp;</div>
-
-                        <div class="col-md-3">
-                            <button type="button" class="btn btn-default btn-lg">В ремонт</button>
-                        </div>
+                    <div class="col-md-12 btn-group">
+                        <button type="button" class="btn btn-default btn-lg col-md-2">Регистрация</button>
+                        <button type="button" class="btn btn-default btn-lg col-md-2">Подготовка</button>
+                        <button type="button" class="btn btn-default btn-lg col-md-2">В ремонт</button>
                     </div>
                 </div>
 
@@ -574,10 +552,20 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-1.11.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!-- DataTables -->
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap.js"></script>
     <!-- Spoiler -->
     <script src="js/spoiller.js"></script>
     <!-- Custom -->
     <script src="js/custom.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            $('#devicelist').dataTable();
+        } );
+    </script>  
+      
   </body>
 </html>
