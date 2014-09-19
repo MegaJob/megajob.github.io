@@ -231,20 +231,17 @@
                         </div>
                         <div class="panel-body spoiler-body collapse">
                             <div class="table-responsive">
-                                <table class="table table-hover table-bordered table-striped table-condensed">
+                                <table id="details" class="table table-hover table-bordered table-striped table-condensed display compact">
                                     <thead>
                                         <tr>
                                             <th>
-                                                <div>Название детали <span class="glyphicon glyphicon-sort"></span></div>
-                                                <div><input class="col-md-12"></div>
+                                                <div>Название детали</div>
                                             </th>
                                             <th>
-                                                <div>Кол-во в блоке <span class="glyphicon glyphicon-sort"></span></div>
-                                                <div><input class="col-md-12"></div>
+                                                <div>Кол-во в блоке</div>
                                             </th>
                                             <th>
-                                                <div>Кол-во на складе <span class="glyphicon glyphicon-sort"></span></div>
-                                                <div><input class="col-md-12"></div>
+                                                <div>Кол-во на складе</div>
                                             </th>
                                         </tr>
                                     </thead>
@@ -381,16 +378,18 @@
                         <div class="table-responsive">
                             <table id="devicelist" class="table table-hover table-bordered table-striped table-condensed display compact">
                                 <thead>
-                                    <th>
-                                        <div>Заводской номер</div>
-                                    </th>
-                                    <th>
-                                        <div>Статус</div>
-                                    </th>
-                                    <th class="text-center">
-                                        <button><span class="glyphicon glyphicon-filter"></span></button>
-                                    </th>
+                                    <tr>
+                                        <th>Заводской номер</th>
+                                        <th>Статус</th>
+                                        <th class="text-center"><span class="glyphicon glyphicon-filter"></span></th>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
                                 </thead>
+                     
                                 <tbody>
                                     <tr>
                                         <td>KE2.0-123-2015</td>
@@ -526,7 +525,7 @@
                                         <td>KE2.0-123-2015</td>
                                         <td>Готов</td>
                                         <td class="text-center"><label><input type="checkbox"></label></td>
-                                    </tr>
+                                    </tr>                                    
                                 </tbody>
                             </table>
                         </div>
@@ -551,11 +550,12 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-1.11.1.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Include all compiled plugins (below), or include individual files as needed  -->
     <script src="js/bootstrap.js"></script>
     <!-- DataTables -->
-    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
     <script src="js/dataTables.bootstrap.js"></script>
+    <script src="js/jquery.dataTables.columnFilter.js"></script>
     <!-- Spoiler -->
     <script src="js/spoiller.js"></script>
     <!-- Custom -->
@@ -563,9 +563,23 @@
     
     <script>
         $(document).ready(function() {
-            $('#devicelist').dataTable();
-        } );
-    </script>  
-      
+            $('#devicelist').dataTable({
+                language: {
+                    url: '/lang/dataTables.ru.json'
+                },
+                "paging":   false,
+                //"info":     false,
+                stateSave: true,
+                "bSortCellsTop": true
+            })
+            .columnFilter({
+                sPlaceHolder: "head:after",
+                aoColumns: [{ type: "text" },
+                            { type: "select" },
+                            null
+                ]
+            });
+        });
+    </script>
   </body>
 </html>
