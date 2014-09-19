@@ -7,7 +7,11 @@
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/magic-bootstrap.css" rel="stylesheet">
+    <!-- DataTables -->
+    <link href="css/jquery.dataTables.css" rel="stylesheet">
+    <!-- DataTables Bootstrap -->
+    <link href="css/dataTables.bootstrap.css" rel="stylesheet"> 
     <!-- Custom -->
     <link href="css/custom.css" rel="stylesheet">
       
@@ -29,7 +33,7 @@
   <body>
     
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -39,7 +43,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img class="navbar-brand" src="img/logo.png"/>
+                <img class="navbar-brand" style="height:50px; padding:0;" src="img/logo_bgnd.png"/>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -91,30 +95,23 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="table-responsive">
-                            <table class="table table-hover table-bordered table-striped table-condensed">
+                            <table id="warehousTable" class="table table-hover table-bordered table-striped table-condensed">
                                 <thead>
                                     <tr>
-                                        <th>
-                                            <div>Класс детали <span class="glyphicon glyphicon-sort"></span></div>
-                                            <div><input></div>
-                                        </th>
-                                        <th>
-                                            <div>Тип детали <span class="glyphicon glyphicon-sort"></span></div>
-                                            <div><input></div>
-                                        </th>
-                                        <th>
-                                            <div>Название детали <span class="glyphicon glyphicon-sort"></span></div>
-                                            <div><input></div>
-                                        </th>
-                                        <th>
-                                            <div>Кол-во на складе <span class="glyphicon glyphicon-sort"></span></div>
-                                            <div><input></div>
-                                        </th>
-                                        <th>
-                                            <div>Критическое кол-во <span class="glyphicon glyphicon-sort"></span></div>
-                                            <div><input></div>
-                                        </th>
+                                        <th>Класс детали</th>
+                                        <th>Тип детали</th>
+                                        <th>Название детали</th>
+                                        <th>Кол-во на складе</th>
+                                        <th>Критическое кол-во</th>
                                         <th>&nbsp;</th>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -266,11 +263,39 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-1.11.1.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed  -->
+    <script src="js/bootstrap.js"></script>
+    <!-- DataTables -->
+    <script src="js/jquery.dataTables.js"></script>
+    <script src="js/dataTables.bootstrap.js"></script>
+    <script src="js/jquery.dataTables.columnFilter.js"></script>
     <!-- Spoiler -->
     <script src="js/spoiller.js"></script>
     <!-- Custom -->
     <script src="js/custom.js"></script>
+      
+      <script>
+        $(document).ready(function() {
+            $('#warehousTable').dataTable({
+                language: {
+                    url: '/lang/dataTables.ru.json'
+                },
+                "paging":   false,
+                //"info":     false,
+                stateSave: true,
+                "bSortCellsTop": true
+            })
+            .columnFilter({
+                sPlaceHolder: "head:after",
+                aoColumns: [{ type: "select" },
+                            { type: "select" },
+                            { type: "text" },
+                            { type: "text" },
+                            { type: "text" },
+                            null
+                ]
+            });
+        });
+    </script>
   </body>
 </html>
