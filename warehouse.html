@@ -95,7 +95,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="table-responsive">
-                            <table id="warehousTable" class="table table-hover table-bordered table-striped table-condensed">
+                            <table id="warehousTable" class="table table-hover table-bordered table-striped table-condensed compact">
                                 <thead>
                                     <tr>
                                         <th>Класс детали</th>
@@ -124,7 +124,7 @@
                                         <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>Резина</td>
+                                        <td>Пластик</td>
                                         <td>Сита</td>
                                         <td>Резина, которую нужно тянуть</td>
                                         <td>30 см</td>
@@ -140,7 +140,7 @@
                                         <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>Резина</td>
+                                        <td>Пластик</td>
                                         <td>Сита</td>
                                         <td>Шпунтик</td>
                                         <td>6 шт</td>
@@ -156,7 +156,7 @@
                                         <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>Резина</td>
+                                        <td>Крепёж</td>
                                         <td>Сита</td>
                                         <td>Супер технологичная железяка</td>
                                         <td>5 шт</td>
@@ -164,7 +164,7 @@
                                         <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>Резина</td>
+                                        <td>Пластик</td>
                                         <td>Сита</td>
                                         <td>Ещё какая-то деталь со склада</td>
                                         <td>0</td>
@@ -180,7 +180,7 @@
                                         <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>Резина</td>
+                                        <td>Крепёж</td>
                                         <td>Сита</td>
                                         <td>Резина, которую нужно тянуть</td>
                                         <td>30 см</td>
@@ -204,7 +204,7 @@
                                         <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>Резина</td>
+                                        <td>Крепёж</td>
                                         <td>Сита</td>
                                         <td>Гайка</td>
                                         <td>4 шт</td>
@@ -228,7 +228,7 @@
                                         <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>Резина</td>
+                                        <td>Пластик</td>
                                         <td>Сита</td>
                                         <td>Винтик</td>
                                         <td>2 шт</td>
@@ -250,11 +250,6 @@
                 </div>
             </div>
 
-            <!-- Кнопки -->
-            <div class="row text-center">
-                <button type="button" class="btn btn-default btn-lg col-md-2">Новая деталь</button>
-            </div>
-
             <!-- Speacer -->
             <div class="row">&nbsp;</div>
                 
@@ -269,32 +264,40 @@
     <script src="js/jquery.dataTables.js"></script>
     <script src="js/dataTables.bootstrap.js"></script>
     <script src="js/jquery.dataTables.columnFilter.js"></script>
+      <script src="js/jquery.dataTables.rowGrouping.js"></script>
     <!-- Spoiler -->
     <script src="js/spoiller.js"></script>
     <!-- Custom -->
     <script src="js/custom.js"></script>
       
-      <script>
+    <script>
         $(document).ready(function() {
-            $('#warehousTable').dataTable({
-                language: {
-                    url: '/lang/dataTables.ru.json'
-                },
-                "paging":   false,
-                //"info":     false,
-                stateSave: true,
-                "bSortCellsTop": true
-            })
-            .columnFilter({
-                sPlaceHolder: "head:after",
-                aoColumns: [{ type: "select" },
-                            { type: "select" },
-                            { type: "text" },
-                            { type: "text" },
-                            { type: "text" },
-                            null
-                ]
-            });
+            $('#warehousTable')
+                .dataTable({
+                    "info":     true,
+                    stateSave: true,
+                    "bSortCellsTop": true,
+                     /* for grouping */
+                    "bLengthChange": false,
+                    "bPaginate": false
+                    /*language: {
+                        url: '/lang/dataTables.ru.json'
+                    }*/
+                })
+                .columnFilter({
+                    sPlaceHolder: "head:after",
+                    bUseColVis: true,
+                    aoColumns: [{ type: "select" },
+                                { type: "select" },
+                                { type: "select" },
+                                null,
+                                null
+                               ]
+                })
+                .rowGrouping({
+                    iGroupingColumnIndex: 0,
+                    bExpandableGrouping: true
+                })
         });
     </script>
   </body>
