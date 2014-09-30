@@ -68,7 +68,7 @@
     <!-- Page Content -->
     <div class="container">            
         <div class=" row table-responsive">
-            <table id="warehousTable" class="table table-hover table-bordered table-striped table-condensed">
+            <table id="warehousTable" class="table table-hover table-bordered table-striped table-condensed compact">
                 <thead>
                     <tr>
                         <th>Класс детали</th>
@@ -230,6 +230,7 @@
     <script src="js/dataTables.bootstrap.js"></script>
     <script src="js/jquery.dataTables.columnFilter.js"></script>
     <script src="js/jquery.dataTables.rowGrouping.js"></script>
+    <script src="js/jquery.floatThead.js"></script>
     <!-- Spoiler -->
     <script src="js/spoiller.js"></script>
     <!-- Custom -->
@@ -265,6 +266,7 @@
                     iGroupingColumnIndex: 0,
                     bExpandableGrouping: true
                 })
+                .floatThead()
         });
     </script>  
 </body>

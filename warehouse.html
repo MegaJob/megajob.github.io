@@ -21,6 +21,10 @@
         padding-top: 70px;
         /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     }
+    /* Override style to show global search inputbox */
+    .dataTables_filter {
+        display:block;
+    }        
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -70,182 +74,462 @@
             <div class="col-lg-12 text-left col-xl-12">
                 <h1>Склад</h1>
                 
-                <!-- Кнопки -->
-                <div class="row text-center">
-                    <div class="col-md-12 btn-group">
-                        <button type="button" class="btn btn-info btn-sm col-md-1">Регистрация</button>
-                        <button type="button" class="btn btn-info btn-sm col-md-1">Подготовка</button>
-                        <button type="button" class="btn btn-info btn-sm col-md-1">В ремонт</button>
-                        <button type="button" class="btn btn-info btn-sm col-md-1">Регистрация</button>
-                        <button type="button" class="btn btn-info btn-sm col-md-1">Подготовка</button>
-                        <button type="button" class="btn btn-info btn-sm col-md-1">В ремонт</button>
-                        <button type="button" class="btn btn-info btn-sm col-md-1">Регистрация</button>
-                        <button type="button" class="btn btn-info btn-sm col-md-1">Подготовка</button>
-                        <button type="button" class="btn btn-info btn-sm col-md-1">В ремонт</button>
-                        <button type="button" class="btn btn-info btn-sm col-md-1">Регистрация</button>
-                        <button type="button" class="btn btn-info btn-sm col-md-1">Подготовка</button>
-                        <button type="button" class="btn btn-info btn-sm col-md-1">В ремонт</button>
-                    </div>
-                </div>
                 
-                <!-- Speacer -->
-                <div class="row">&nbsp;</div>
-                
-                <!-- Состав блока -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="table-responsive">
-                            <table id="warehousTable" class="table table-hover table-bordered table-striped table-condensed">
-                                <thead>
-                                    <tr>
-                                        <th>Класс детали</th>
-                                        <th>Тип детали</th>
-                                        <th>Название детали</th>
-                                        <th>Кол-во на складе</th>
-                                        <th>Критическое кол-во</th>
-                                        <th>&nbsp;</th>
-                                    </tr>
-                                    <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Крепёж</td>
-                                        <td>Винты</td>
-                                        <td>Винтик</td>
-                                        <td data-sort="2">2 шт</td>
-                                        <td>10 шт</td>
-                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Резина</td>
-                                        <td>Сита</td>
-                                        <td>Резина, которую нужно тянуть</td>
-                                        <td data-sort="30">30 м</td>
-                                        <td>100 м</td>
-                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Нержавейка толстая</td>
-                                        <td>Сита</td>
-                                        <td>Неведомая хрень</td>
-                                        <td data-sort="200">200 шт</td>
-                                        <td>1000 шт</td>
-                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Электроника</td>
-                                        <td>Платы прибора</td>
-                                        <td>Боковая плата №1</td>
-                                        <td data-sort="6">6 шт</td>
-                                        <td>50 шт</td>
-                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Нержавейка толстая</td>
-                                        <td>Сита</td>
-                                        <td>Прижим прижымыч</td>
-                                        <td data-sort="4">4 шт</td>
-                                        <td>60 шт</td>
-                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Нержавейка тонкая</td>
-                                        <td>Сита</td>
-                                        <td>Супер технологичная железяка</td>
-                                        <td data-sort="5">5 шт</td>
-                                        <td>500 шт</td>
-                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
-                                    </tr>
-                                    <tr class="danger">
-                                        <td>Пластик</td>
-                                        <td>Сита</td>
-                                        <td>Ещё какая-то деталь со склада</td>
-                                        <td data-sort="0">0 шт</td>
-                                        <td>1000</td>
-                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
-                                    </tr>
-                                    <tr class="warning">
-                                        <td>Крепёж</td>
-                                        <td>Сита</td>
-                                        <td>Винтик</td>
-                                        <td data-sort="2">2 шт</td>
-                                        <td>10 шт</td>
-                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Крепёж</td>
-                                        <td>Сита</td>
-                                        <td>Резина, которую нужно тянуть</td>
-                                        <td data-sort="30">30 шт</td>
-                                        <td>100 м</td>
-                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Резина</td>
-                                        <td>Сита</td>
-                                        <td>Неведомая хрень</td>
-                                        <td data-sort="200">200 шт</td>
-                                        <td>1000 м<sup>2</sup></td>
-                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Механика</td>
-                                        <td>Сита</td>
-                                        <td>Шпунтик</td>
-                                        <td data-sort="6">6 шт</td>
-                                        <td>50 шт</td>
-                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Крепёж</td>
-                                        <td>Сита</td>
-                                        <td>Гайка</td>
-                                        <td data-sort="4">4 шт</td>
-                                        <td>60 шт</td>
-                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Резина</td>
-                                        <td>Сита</td>
-                                        <td>Супер технологичная железяка</td>
-                                        <td data-sort="5">5 шт</td>
-                                        <td>500 шт</td>
-                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Резина</td>
-                                        <td>Сита</td>
-                                        <td>Ещё какая-то деталь со склада</td>
-                                        <td data-sort="0">0 шт</td>
-                                        <td>1000</td>
-                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Пластик</td>
-                                        <td>Сита</td>
-                                        <td>Винтик</td>
-                                        <td data-sort="2">2 шт</td>
-                                        <td>10 шт</td>
-                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Резина</td>
-                                        <td>Сита</td>
-                                        <td>Резина, которую нужно тянуть</td>
-                                        <td data-sort="30">30 шт</td>
-                                        <td>100 м</td>
-                                        <td><button><span class="glyphicon glyphicon-gift"></span></button></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                <!-- Складская таблица -->
+                <div class="row col-md-12">
+                    <div class="table-responsive">
+                        <table id="warehousTable" class="table table-hover table-bordered table-striped table-condensed compact">
+                            <thead>
+                                <tr>
+                                    <th>Класс детали</th>
+                                    <th>Тип детали</th>
+                                    <th>Название детали</th>
+                                    <th>ID</th>
+                                    <th>Общее кол-во</th>
+                                    <th>Критическое кол-во</th>
+                                    <th class="col-lg-2">&nbsp;</th>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Пластик</td>
+                                    <td>Полипропилен</td>
+                                    <td>Каркас чего-то там в приборе</td>
+                                    <td>SI_02</td>
+                                    <td data-sort="100">100 шт</td>
+                                    <td>1000 шт</td>
+                                    <td>
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn btn-group-xs">
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-check"></span></button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Нержавейка толстая</td>
+                                    <td>Некий тип</td>
+                                    <td>Незаменимая при сборке штуовина</td>
+                                    <td>NERZH_01</td>
+                                    <td data-sort="2">10 шт</td>
+                                    <td>5 шт</td>
+                                    <td>
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn btn-group-xs">
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-check"></span></button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Нержавейка тонкая</td>
+                                    <td>Почти фольга</td>
+                                    <td>Микроминиатюрный лист для запихивания в щели</td>
+                                    <td>KOSTYL_01</td>
+                                    <td data-sort="50">50 шт</td>
+                                    <td>100500 шт</td>
+                                    <td>
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn btn-group-xs">
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-check"></span></button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Электроника</td>
+                                    <td>Переходник</td>
+                                    <td>USB-flash to VGA</td>
+                                    <td>HREN_01</td>
+                                    <td data-sort="555">555 шт</td>
+                                    <td>777 шт</td>
+                                    <td>
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn btn-group-xs">
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-check"></span></button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Крепёж</td>
+                                    <td>Саморез</td>
+                                    <td>Саморез 2,9x6,5 DIN 7851</td>
+                                    <td>smrz2_9x6_5</td>
+                                    <td data-sort="2000">5000 шт</td>
+                                    <td>6000 шт</td>
+                                    <td>
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn btn-group-xs">
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-check"></span></button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Резина</td>
+                                    <td>Бубль гум</td>
+                                    <td>Жвачка для мозгов</td>
+                                    <td>BUBLGUM_01</td>
+                                    <td data-sort="100">100 км</td>
+                                    <td>1000 км</td>
+                                    <td>
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn btn-group-xs">
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-check"></span></button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Теплоизоляция</td>
+                                    <td>В рулонах</td>
+                                    <td>БВГД-256</td>
+                                    <td>BVGD_256</td>
+                                    <td data-sort="10">10 м<sup>2</sup></td>
+                                    <td>100 м<sup>2</sup></td>
+                                    <td>
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn btn-group-xs">
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-check"></span></button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Крепёж</td>
+                                    <td>Винты</td>
+                                    <td>Винтик</td>
+                                    <td>VINT</td>
+                                    <td data-sort="2">2 шт</td>
+                                    <td>10 шт</td>
+                                    <td>                                    
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn btn-group-xs">
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-check"></span></button>
+                                            </span>
+                                        </div>
+                                        <!-- TO DO Start -->
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" class="form-control">
+                                            <div class="input-group-btn">
+                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Поставщик <span class="caret"></span></button>
+                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li>ТУТ ДОЛЖЕН БЫТЬ ПОИСК</li>
+                                                    <li>Дядя Вася</li>
+                                                    <li>Тётя Маша</li>
+                                                    <li>Баба Шура</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- TO DO End -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Резина</td>
+                                    <td>Сита</td>
+                                    <td>Резина, которую нужно тянуть</td>
+                                    <td>REZINA_01</td>
+                                    <td data-sort="30">30 м</td>
+                                    <td>100 м</td>
+                                    <td>
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn btn-group-xs">
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-check"></span></button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Нержавейка толстая</td>
+                                    <td>Сита</td>
+                                    <td>Неведомая хрень</td>
+                                    <td>NEVEDOM_01</td>
+                                    <td data-sort="200">200 шт</td>
+                                    <td>1000 шт</td>
+                                    <td>
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn btn-group-xs">
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-check"></span></button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Электроника</td>
+                                    <td>Платы прибора</td>
+                                    <td>Боковая плата №1</td>
+                                    <td>RT_1</td>
+                                    <td data-sort="6">6 шт</td>
+                                    <td>50 шт</td>
+                                    <td>
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn btn-group-xs">
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-check"></span></button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Нержавейка толстая</td>
+                                    <td>Сита</td>
+                                    <td>Прижим прижымыч</td>
+                                    <td>ZHEST_1</td>
+                                    <td data-sort="4">4 шт</td>
+                                    <td>60 шт</td>
+                                    <td>
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn btn-group-xs">
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-check"></span></button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Нержавейка тонкая</td>
+                                    <td>Сита</td>
+                                    <td>Супер технологичная железяка</td>
+                                    <td>ZHEST_2</td>
+                                    <td data-sort="5">5 шт</td>
+                                    <td>500 шт</td>
+                                    <td>
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn btn-group-xs">
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-check"></span></button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="danger">
+                                    <td>Пластик</td>
+                                    <td>Сита</td>
+                                    <td>Ещё какая-то деталь со склада</td>
+                                    <td>CHUDOUDO_01</td>
+                                    <td data-sort="0">0 шт</td>
+                                    <td>1000</td>
+                                    <td>
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn btn-group-xs">
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-check"></span></button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="warning">
+                                    <td>Крепёж</td>
+                                    <td>Сита</td>
+                                    <td>Винтик</td>
+                                    <td>VINT_02</td>
+                                    <td data-sort="2">2 шт</td>
+                                    <td>10 шт</td>
+                                    <td>
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn btn-group-xs">
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-check"></span></button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Крепёж</td>
+                                    <td>Сита</td>
+                                    <td>Резина, которую нужно тянуть</td>
+                                    <td>BUBLEGUM_04</td>
+                                    <td data-sort="30">30 шт</td>
+                                    <td>100 м</td>
+                                    <td>
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn btn-group-xs">
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-check"></span></button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Резина</td>
+                                    <td>Сита</td>
+                                    <td>Неведомая хрень</td>
+                                    <td>BUBLE_56</td>
+                                    <td data-sort="200">200 шт</td>
+                                    <td>1000 м<sup>2</sup></td>
+                                    <td>
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn btn-group-xs">
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-check"></span></button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Механика</td>
+                                    <td>Сита</td>
+                                    <td>Шпунтик</td>
+                                    <td>SHPUNTIK_01</td>
+                                    <td data-sort="6">6 шт</td>
+                                    <td>50 шт</td>
+                                    <td>
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn btn-group-xs">
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-check"></span></button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Крепёж</td>
+                                    <td>Сита</td>
+                                    <td>Гайка</td>
+                                    <td>GAIKA_05</td>
+                                    <td data-sort="4">4 шт</td>
+                                    <td>60 шт</td>
+                                    <td>
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn btn-group-xs">
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-check"></span></button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Резина</td>
+                                    <td>Сита</td>
+                                    <td>Супер технологичная железяка</td>
+                                    <td>METALL_06</td>
+                                    <td data-sort="5">5 шт</td>
+                                    <td>500 шт</td>
+                                    <td>
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn btn-group-xs">
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-check"></span></button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Резина</td>
+                                    <td>Сита</td>
+                                    <td>Ещё какая-то деталь со склада</td>
+                                    <td>DETAIL_01</td>
+                                    <td data-sort="0">0 шт</td>
+                                    <td>1000</td>
+                                    <td>
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn btn-group-xs">
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-check"></span></button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Пластик</td>
+                                    <td>Сита</td>
+                                    <td>Винтик</td>
+                                    <td>VINT_68</td>
+                                    <td data-sort="2">2 шт</td>
+                                    <td>10 шт</td>
+                                    <td>
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn btn-group-xs">
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-check"></span></button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Резина</td>
+                                    <td>Сита</td>
+                                    <td>Резина, которую нужно тянуть</td>
+                                    <td>REZ_78</td>
+                                    <td data-sort="30">30 шт</td>
+                                    <td>100 м</td>
+                                    <td>
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn btn-group-xs">
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-check"></span></button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -264,7 +548,7 @@
     <script src="js/jquery.dataTables.js"></script>
     <script src="js/dataTables.bootstrap.js"></script>
     <script src="js/jquery.dataTables.columnFilter.js"></script>
-      <script src="js/jquery.dataTables.rowGrouping.js"></script>
+    <script src="js/jquery.dataTables.rowGrouping.js"></script>
     <!-- Spoiler -->
     <script src="js/spoiller.js"></script>
     <!-- Custom -->
@@ -284,12 +568,13 @@
                     "bSortCellsTop": true,
                      /* for grouping */
                     "bLengthChange": false,
-                    "bPaginate": false,
+                    "bPaginate": false
                 })
                 .columnFilter({
                     sPlaceHolder: "head:after",
                     bUseColVis: true,
                     aoColumns: [null,
+                                { type: "select" },
                                 { type: "select" },
                                 { type: "select" },
                                 null,
@@ -298,7 +583,8 @@
                 })
                 .rowGrouping({
                     iGroupingColumnIndex: 0,
-                    bExpandableGrouping: true
+                    bExpandableGrouping: true,
+                    asExpandedGroups: []
                 })
         });
     </script>
