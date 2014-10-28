@@ -158,6 +158,89 @@
             </div>
             
         </div>
+        
+        <div class='row'>
+            
+            <div class="col-md-4">
+                <div>&nbsp;</div>
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                         <h3 class="panel-title">Отчет по работе</h3>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-bordered table-striped table-condensed">
+                            <tbody>
+                                <tr>
+                                    <td>Приборы</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Сита</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Часы</td>
+                                    <td>160</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td></td>
+                                </tr> 
+                            </tbody>
+                        </table>
+                    </div>
+                 </div>
+            </div>
+        
+        
+        </div>
+        
+        
+        <div class="row">&nbsp;</div>
+
+                <!-- События -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table id="devicelist" class="table table-hover table-bordered table-striped table-condensed display compact">
+                                <thead>
+                                    <tr>
+                                        <th>Дата и Время</th>
+                                        <th>Идентификатор</th>
+                                        <th>Текущий статус</th>
+                                        <th>Ответственный</th>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        
+                                    </tr>
+                                </thead>
+                     
+                                <tbody>
+                                    <tr>
+                                        <td>Дата и Время</td>
+                                        <td>KE2.0-123-2015</td>
+                                        <td>Готов</td>
+                                        <td>Петров</td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>Дата и Время</td>
+                                        <td>KE2.0-123-2015</td>
+                                        <td>Готов</td>
+                                        <td>Петров</td>
+                                        
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+        
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -170,5 +253,59 @@
     <script src="js/jquery.dataTables.columnFilter.js"></script>
     <script src="js/jquery.dataTables.rowGrouping.js"></script>
     
+    <script src="js/spoiller.js"></script>
+    <!-- Custom -->
+    <script src="js/custom.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            $('#devicelist').dataTable({
+                language: {
+                    url: '/lang/dataTables.ru.json'
+                },
+                "paging":   false,
+                //"info":     false,
+                stateSave: true,
+                "bSortCellsTop": true
+            })
+            .columnFilter({
+                sPlaceHolder: "head:after",
+                aoColumns: [{ type: "text" },
+                            { type: "text" },
+                            { type: "select" },
+                            { type: "select" },
+                            null
+                ]
+            });
+            $('#details')
+                .dataTable({
+
+                    "paging":   false,
+                    "info":     true,
+                    stateSave: true,
+                    "bSortCellsTop": true,
+
+                    "bLengthChange": false,
+                    "bPaginate": false
+                })
+                .columnFilter({
+                    sPlaceHolder: "head:after",
+                    bUseColVis: true,
+                    aoColumns: [null,
+                                { type: "text" },
+                                { type: "text" },
+                                { type: "text" },
+                                { type: "text" },
+                                { type: "text" },
+                               ]
+                })
+                .rowGrouping({
+                    iGroupingColumnIndex: 0,
+                    bExpandableGrouping: true,
+                    asExpandedGroups: []
+                })
+        });
+    </script>
+      
   </body>
 </html>
