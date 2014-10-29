@@ -7,7 +7,11 @@
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/magic-bootstrap.css" rel="stylesheet">
+    <!-- DataTables -->
+    <link href="css/jquery.dataTables.css" rel="stylesheet">
+    <!-- DataTables Bootstrap -->
+    <link href="css/dataTables.bootstrap.css" rel="stylesheet"> 
     <!-- Custom -->
     <link href="css/custom.css" rel="stylesheet">
       
@@ -29,7 +33,8 @@
   <body>
     
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar-default navbar-fixed-top" role="navigation">
+        <div class='pull-right'><a href="profile.html"><img  src="img/users.jpg"></a></div>
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -39,7 +44,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img class="navbar-brand" src="img/logo.png"/>
+                <img class="navbar-brand" style="height:50px; padding:0;" src="img/logo_bgnd.png"/>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -53,15 +58,16 @@
                     <li>
                         <a href="index.html">Приборы</a>
                     </li>
+                    <li>
+                        <a href="detail.html">Деталь</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
-      
-    <!-- Page Content -->
-    <div class="container">
+      <div class="container">
         <div class="row">
             <div class="col-lg-12 text-left col-xl-12">
                 <h1>CE2.0</h1>
@@ -70,7 +76,7 @@
                 <!-- Общая информация -->
                 <div class="row">
                     <div class="col-md-3 text-center">
-                        <img class="col-md-12" src="img/pin1.jpg">
+                        <img class="col-md-12" src="img/CE.JPG">
                         <div>&nbsp;</div>
                     </div>
 
@@ -473,14 +479,57 @@
             </div>
         </div>
     </div>
+    <!-- Page Content -->
+    
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-1.11.1.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed  -->
+    <script src="js/bootstrap.js"></script>
+    <!-- DataTables -->
+    <script src="js/jquery.dataTables.js"></script>
+    <script src="js/dataTables.bootstrap.js"></script>
+    <script src="js/jquery.dataTables.columnFilter.js"></script>
+    <script src="js/jquery.dataTables.rowGrouping.js"></script>
     <!-- Spoiler -->
     <script src="js/spoiller.js"></script>
     <!-- Custom -->
     <script src="js/custom.js"></script>
+    
+     <script>
+        $(document).ready(function() {
+            'use strict';
+            $('#warehousTable')
+                .dataTable({
+                    /*language: {
+                        url: 'lang/dataTables.ru.json'
+                    },*/
+                    "paging":   false,
+                    "info":     true,
+                    stateSave: true,
+                    "bSortCellsTop": true,
+                     /* for grouping */
+                    "bLengthChange": false,
+                    "bPaginate": false
+                })
+                .columnFilter({
+                    sPlaceHolder: "head:after",
+                    bUseColVis: true,
+                    aoColumns: [null,
+                                { type: "select" },
+                                { type: "select" },
+                                { type: "select" },
+                                null,
+                                null
+                               ]
+                })
+                .rowGrouping({
+                    iGroupingColumnIndex: 0,
+                    bExpandableGrouping: true,
+                    asExpandedGroups: []
+                })
+        });
+    </script>
+
   </body>
 </html>
